@@ -28,7 +28,7 @@ def formDemo():
         # if request.form['name']:
         #     name = request.form['name']
         if request.form['message']:
-            writeToFile('static\details.txt', request.form['message'])
+            writeToFile('static\comments.txt', request.form['message'])
 
     return render_template('form.html', name=name)
 
