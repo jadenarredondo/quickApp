@@ -14,7 +14,7 @@ def writeToFile(filename, message):
 @app.route('/')
 def homePage():
     name = "Jaden Arredondo"
-    details = readDetails('static\details.txt')
+    details = readDetails('static/details.txt')
     return render_template("base.html", name=name, aboutMe=details)
 
 @app.route('/user/<name>')
@@ -28,7 +28,7 @@ def formDemo():
         # if request.form['name']:
         #     name = request.form['name']
         if request.form['message']:
-            writeToFile('static\comments.txt', request.form['message'])
+            writeToFile('static/comments.txt', request.form['message'])
 
     return render_template('form.html', name=name)
 
